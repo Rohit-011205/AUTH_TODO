@@ -5,7 +5,7 @@ import Signup from './Pages/Signup.jsx';
 import Verification from './Pages/Verification.jsx';
 import Projects from './Pages/Projects.jsx';
 import Task from './Pages/Task.jsx';
-import useStore from './store/useStore.js';
+import useStore from './Store/useStore.js';
 
 const ProtectedRoute = ({ children }) => {
     const { token } = useStore();
