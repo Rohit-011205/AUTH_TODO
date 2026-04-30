@@ -1,7 +1,9 @@
 import React from 'react'
 import { useState } from 'react'
 import API from '../API.js'
-import { Link, useNavigate } from 'react-router-dom'    
+import { Link, useNavigate } from 'react-router-dom'  
+import { useLocation } from 'react-router-dom';
+import useStore from '../Store/useStore.js'  
 
 
 const Verification = () => {
@@ -18,7 +20,7 @@ const Verification = () => {
         setLoading(true);
         setError('');
         try {
-            const { data } = await API.post('/auth/verify-otp', { email, otp });
+            const { data } = await API.post('/auth/verify-email', { email, otp });
             setUser(data.user, data.token);
             navigate('/projects');
         } catch (err) {

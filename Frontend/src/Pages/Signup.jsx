@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import API from '../API.js'
 import { Link, useNavigate } from 'react-router-dom'
+import useStore from '../Store/useStore.js'
 
 const Signup = () => {
     const navigate = useNavigate();
@@ -15,7 +16,7 @@ const Signup = () => {
         setLoading(true);
         setError('');
         try {
-            await API.post('/auth/register', formData);
+            await API.post('/auth/signup', formData);
             navigate('/verify-otp', { state: { email: formData.email } });
         } catch (err) {
             setError(err.response?.data?.message || 'Registration failed');

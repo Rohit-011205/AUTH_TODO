@@ -21,7 +21,7 @@ function App() {
                 <Route path="/register" element={<Signup />} />
                 <Route path="/verify-otp" element={<Verification />} />
                 <Route path="/projects" element={<ProtectedRoute><Projects /></ProtectedRoute>} />
-                <Route path="/tasks/:projectId/tasks" element={<ProtectedRoute><Task /></ProtectedRoute>} />
+                <Route path="/tasks/:ProjectId/tasks" element={<ProtectedRoute><Task /></ProtectedRoute>} />
             </Routes>
         </BrowserRouter>
     );
