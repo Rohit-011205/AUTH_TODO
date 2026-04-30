@@ -5,7 +5,7 @@ import { CreateProject, getProject, deleteProject } from "../Controllers/task.co
 const router = express.Router();
 
 router.post("/create", ProtectRoute, CreateProject);
-router.get("/", ProtectRoute, getProject);
+router.get("/get", ProtectRoute, getProject);
 router.delete("/delete/:id", ProtectRoute, deleteProject);
 
 export default router;

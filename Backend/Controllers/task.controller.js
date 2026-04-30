@@ -75,6 +75,7 @@ export const createTask = async (req, res) => {
             dueDate,
             userId: req.user.id,
             projectId
+            
         })
 
         await task.save();

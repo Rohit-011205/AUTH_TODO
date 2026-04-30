@@ -22,9 +22,9 @@ const taskSchema = new mongoose.Schema({
         ref: "User",
         required: true,
     },
-    taskId: {
+    projectId: {
         type: mongoose.Schema.Types.ObjectId,
-        ref: "Task",
+        ref: "Project",
         required: true,
     }
 }, { timestamps: true });

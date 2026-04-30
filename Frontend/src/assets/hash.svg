@@ -1,0 +1,3 @@
+import Hash from "lucide-react/dist/esm/icons/hash.js";
+
+<Hash/>
